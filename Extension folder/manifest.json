@@ -1,0 +1,22 @@
+{
+	"name": "Google Form Autosave",
+	"version": "0.0.1",
+	"manifest_version": 2,
+	"description": "Autosaves Google Form data in case of a browser or computer crash, or network failure",
+	"content_scripts": [
+		{
+			"matches": [
+				"https://docs.google.com/a/*/forms/*",
+				"https://docs.google.com/forms/*"
+			],
+			"css": [
+				"autosave.css"
+			],
+			"js": [
+				"jquery-2.1.0.min.js",
+				"autosave.js"
+			],
+			"run_at": "document_end"
+		}
+	]
+}
